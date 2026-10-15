@@ -4,7 +4,7 @@
 **Activity:** Analyze, Test & Defend the Supplied Modbus/TCP OT Simulation
 **Learner:** Nathaniel Temitope Ogunjobi
 **Registration number:** C11/26/ACIS/17372
-**Cohort:** ACIS-COHORT-11, Level 1, Semester 1
+**Cohort:** ACIS-COHORT-11, Level 3, Semester 2
 **Submission deadline:** 15 Oct 2026, 11:59 PM WAT
 
 ## Attribution
