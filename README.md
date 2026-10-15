@@ -41,8 +41,6 @@ pairs, adapter-state record, local service inventory, a learner-created loopback
 request/response analysis, five demonstration scenarios (SV-01 to SV-05) on both the direct and guarded paths with console output, dashboard
 screenshots and the complete guard event log, and recovery evidence (final dashboards and a port check after stopping the services).
 
-Before submitting: replace the one remaining `[INSERT]` in `06-final-report.md` (your private repository URL and final commit hash).
-
 Predicted behaviour derived from reading the source code is marked **(predicted from source)**. Where a prediction did not hold (SV-03), the
 report records what actually happened and why, exactly as the Student Lab Guide requires.
 
