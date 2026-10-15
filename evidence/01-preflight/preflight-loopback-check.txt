@@ -1,0 +1,36 @@
+Preflight loopback check (Student Lab Guide, Section 4)
+Learner: Nathaniel Temitope Ogunjobi, C11/26/ACIS/17372
+VM: Ubuntu 64-bit guest on VMware Workstation, user cyber-nate
+Source path: ~/ACICP302ICS-Network-Security-and-Attacks/labs/ot-security/student-lab-source/plant_sim
+Date: 2026-10-14 (VM clock). Exact time of run: not recorded (before the services started at 16:25)
+
+--- Course source commit ---
+$ cd ~/ACICP302ICS-Network-Security-and-Attacks
+$ git rev-parse HEAD
+2a66f9bcf253eb3fe31c68ad52794cd535421da8
+
+--- Check 1: non-loopback / wildcard addresses (expected: no output) ---
+$ grep -R -nE '192\.168\.2\.139|0\.0\.0\.0'
+(no output)
+$ grep -R -nE '192\.168\.2\.139|0\.0\.0\.0' .
+(no output)
+
+--- Check 2: loopback bindings present (expected: matches) ---
+$ grep -R -n '127\.0\.0\.1'
+dashboard_guarded.py:8:TARGET_HOST = "127.0.0.1"
+dashboard_guarded.py:265:    app.run(host="127.0.0.1",port=8081)
+dashboard.py:6:TARGET_HOST = "127.0.0.1"
+dashboard.py:224:    app.run(host="127.0.0.1",port=8080)
+attack_hold.py:5:HOST = "127.0.0.1"
+false_data_attack.py:5:HOST = "127.0.0.1"
+slow_drift_attack.py:5:HOST = "127.0.0.1"
+guard.py:19:PLANT_HOST = "127.0.0.1"
+guard.py:21:HOST = "127.0.0.1"
+dos_attack.py:6:HOST = "127.0.0.1"
+replay_attack.py:5:HOST = "127.0.0.1"
+plant.py:26:HOST = "127.0.0.1"
+recon_scan.py:5:HOST = "127.0.0.1"
+
+Result: no non-loopback or wildcard address appears anywhere in plant_sim/.
+Every service and every demonstration script targets or binds 127.0.0.1 only.
+The archived original source (labs/ot-security/archive-original/) was not executed.

@@ -1,0 +1,8 @@
+VM clock 2026-10-15. Verbatim program output copied from the learner's terminal.
+
+$ python3 attack_hold.py 5020
+--- ATTACK HOLD: targeting port 5020 ---
+Writes sent: 77
+Peak pressure observed: 95.0 bar at t=0.09s (safe range: 30.0-40.0 bar)
+Readings outside safe range: 77/77 (100%)
+RESULT: UNSAFE VALUE REACHED THE PLANT

@@ -1,0 +1,31 @@
+Local service inventory (listening TCP sockets) - read-only check, no probing
+VM: Ubuntu 64-bit guest on VMware Workstation. VM clock about 2026-10-14 23:54.
+Screenshots: listening-services-ss-grep.png (filtered to the four lab ports)
+
+--- Filtered to the four lab ports ---
+$ ss -ltnp | grep -E ':(5020|5021|8080|8081)\b'
+LISTEN 0 128 127.0.0.1:8080 0.0.0.0:*  users:(("python3",pid=38178,fd=4))
+LISTEN 0 128 127.0.0.1:8081 0.0.0.0:*  users:(("python3",pid=38209,fd=4))
+LISTEN 0 100 127.0.0.1:5020 0.0.0.0:*  users:(("python3",pid=38162,fd=6))
+LISTEN 0 100 127.0.0.1:5021 0.0.0.0:*  users:(("python3",pid=38171,fd=7))
+
+--- Full listing (all listening TCP sockets on the VM, VM clock about 2026-10-15 00:24) ---
+$ ss -ltnp
+State   Recv-Q Send-Q Local Address:Port   Peer Address:Port  Process
+LISTEN  0      4096   127.0.0.54:53        0.0.0.0:*
+LISTEN  0      128    127.0.0.1:8080       0.0.0.0:*          users:(("python3",pid=38178,fd=4))
+LISTEN  0      128    127.0.0.1:8081       0.0.0.0:*          users:(("python3",pid=38209,fd=4))
+LISTEN  0      4096   127.0.0.53%lo:53     0.0.0.0:*
+LISTEN  0      4096   127.0.0.1:631        0.0.0.0:*
+LISTEN  0      100    127.0.0.1:5020       0.0.0.0:*          users:(("python3",pid=38162,fd=6))
+LISTEN  0      100    127.0.0.1:5021       0.0.0.0:*          users:(("python3",pid=38171,fd=7))
+LISTEN  0      4096   [::1]:631            [::]:*
+
+Mapping of port to program (from the supplied source, which binds each port): 5020 plant.py, 5021 guard.py,
+8080 dashboard.py, 8081 dashboard_guarded.py. All four are python3 processes owned by the learner account.
+
+Findings:
+- All four lab services listen on 127.0.0.1 only. None listens on 0.0.0.0, on a LAN address, or on an IPv6 wildcard.
+- The other listeners (port 53 name resolver, port 631 printing service) are ordinary Ubuntu services, also bound to
+  loopback only, and are not part of the lab.
+- Listening sockets have no authentication. Any local process can connect to 5020 or 5021 (risks R-01, R-03, R-04).

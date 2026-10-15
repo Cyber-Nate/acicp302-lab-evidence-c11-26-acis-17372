@@ -1,0 +1,9 @@
+VM clock 2026-10-15. Verbatim program output copied from the learner's terminal.
+
+$ python3 recon_scan.py 5021
+--- RECON SCAN: port 5021 ---
+  Regs 0-9: [723, 395, 1340, 1, 0, 0, 0, 0, 0, 0]
+  Regs 10-19: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Regs 20-29: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Regs 30-39: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Regs 40-49: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

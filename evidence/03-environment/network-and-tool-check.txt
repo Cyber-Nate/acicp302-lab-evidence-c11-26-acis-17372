@@ -1,0 +1,32 @@
+Network adapter state and tool installation record
+All commands run in the Ubuntu guest. Times are VM clock unless stated.
+
+--- Before installing Wireshark (screenshot: wireshark-install-and-network-state.png, VM 17:00) ---
+$ which wireshark tshark
+(no output: Wireshark was not installed)
+$ nmcli device status
+DEVICE  TYPE      STATE                   CONNECTION
+lo      loopback  connected (externally)  lo
+ens33   ethernet  unavailable             --
+$ sudo apt update
+...
+Fetched 2,222 kB in 9s (240 kB/s)
+13 packages can be upgraded.
+$ sudo apt install -y wireshark
+
+The apt update reached archive.ubuntu.com, so the adapter was connected for this step.
+Adapter reconnected at about 16:55 VM time (learner's recollection: about 08:55 on the Windows clock, which was then running about 8 hours behind)
+Adapter disconnected again at about 17:01 VM time (about 09:01 on that clock). This agrees with the apt update visible at 17:00 in the screenshot.
+
+--- After installing, before capturing ---
+$ which wireshark dumpcap
+/usr/bin/wireshark
+/usr/bin/dumpcap
+$ nmcli device status
+DEVICE  TYPE      STATE                   CONNECTION
+lo      loopback  connected (externally)  lo
+ens33   ethernet  unavailable             --
+
+Result: the only active interface during the lab run was the loopback device. The ethernet
+adapter (ens33) was unavailable (disconnected) when the capture and all demonstrations ran.
+All four lab services bind to 127.0.0.1 (see 01-preflight/preflight-loopback-check.txt).

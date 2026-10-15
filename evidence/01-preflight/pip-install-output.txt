@@ -1,0 +1,16 @@
+Dependency installation (Student Lab Guide, Section 5)
+Run inside the activated virtual environment, from student-lab-source/.
+The network adapter was connected only for this download, per the guide.
+Connection time and adapter state: not recorded (the adapter was used only for this download and was disconnected before the lab run)
+
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+(.venv) $ pip install -r requirements.txt
+...
+Installing collected packages: pymodbus, markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.5.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 pymodbus-3.6.9 werkzeug-3.1.9
+
+Notes:
+- requirements.txt pins pymodbus==3.6.9 and Flask>=3.0,<4.0 (as supplied, unmodified).
+- The markupsafe wheel tag (cp314) indicates CPython 3.14. The Python version was not recorded.
+- No sudo pip and no global installs were used.

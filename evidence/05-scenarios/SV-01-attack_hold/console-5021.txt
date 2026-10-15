@@ -1,0 +1,8 @@
+VM clock 2026-10-15. Verbatim program output copied from the learner's terminal.
+
+$ python3 attack_hold.py 5021
+--- ATTACK HOLD: targeting port 5021 ---
+Writes sent: 74
+Peak pressure observed: 38.2 bar at t=0.23s (safe range: 30.0-40.0 bar)
+Readings outside safe range: 0/74 (0%)
+RESULT: value never left safe range — attack fully contained

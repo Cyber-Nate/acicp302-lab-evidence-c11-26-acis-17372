@@ -1,0 +1,9 @@
+VM clock 2026-10-15. Verbatim program output copied from the learner's terminal.
+
+$ python3 false_data_attack.py 5020
+--- FALSE DATA INJECTION: port 5020 ---
+Peak temp observed:     110.0C at t=0.01s (safe: 60.0-75.0C)
+Peak pressure observed: 55.0bar at t=0.01s (safe: 30.0-40.0bar)
+Peak flow observed:     200.0Nm3/h at t=0.01s (safe: 50.0-150.0)
+Unsafe readings: temp 6/6, pressure 6/6, flow 6/6
+RESULT: UNSAFE VALUES REACHED THE PLANT

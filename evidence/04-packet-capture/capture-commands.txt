@@ -1,0 +1,27 @@
+Packet capture record. Interface: lo only. Port: 5020 (plant Modbus/TCP). Duration: 10 seconds.
+Times are VM clock.
+
+--- First attempt (failed) ---
+$ sudo dumpcap -i lo -f "tcp port 5020" -a duration:10 -w ~/lab-capture.pcapng
+Capturing on 'Loopback: lo'
+dumpcap: The file to which the capture would be saved ("/home/cyber-nate/lab-capture.pcapng") could not be opened: Permission denied.
+Cause: dumpcap drops root privileges before opening the output file and cannot write to the home folder.
+
+--- Second attempt (successful; screenshot: dumpcap-capture-terminal.png) ---
+$ sudo dumpcap -i lo -f "tcp port 5020" -a duration:10 -w /tmp/lab-capture.pcapng
+Capturing on 'Loopback: lo'
+File: /tmp/lab-capture.pcapng
+Packets captured: 60
+Packets received/dropped on interface 'Loopback: lo': 60/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+$ sudo chown $USER:$USER /tmp/lab-capture.pcapng
+$ mv /tmp/lab-capture.pcapng ~/lab-capture.pcapng
+$ wireshark ~/lab-capture.pcapng &
+
+Wireshark GUI warnings printed to the terminal (portal registration, Wayland text-input) are cosmetic and
+did not affect the capture.
+
+In Wireshark: Analyze > Decode As > TCP port 5020 = Modbus/TCP (Wireshark only auto-decodes port 502).
+Display filters used: modbus (40 of 60 packets displayed), mbtcp.trans_id == 708 (2 packets displayed).
+
+Capture file for submission: copy ~/lab-capture.pcapng into this folder as normal-baseline-lo-5020.pcapng
+(file is in the VM and must be added by the learner).

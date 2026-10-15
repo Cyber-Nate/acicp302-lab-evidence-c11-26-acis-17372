@@ -1,0 +1,11 @@
+{"timestamp": "2026-10-15 06:01:43", "reason": "40.2 bar outside safe range 30.0-40.0 bar"}
+{"timestamp": "2026-10-15 06:01:45", "reason": "41.2 bar outside safe range 30.0-40.0 bar"}
+{"timestamp": "2026-10-15 06:01:47", "reason": "42.2 bar outside safe range 30.0-40.0 bar; cumulative drift of 2.3 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:01:49", "reason": "43.2 bar outside safe range 30.0-40.0 bar; cumulative drift of 3.3 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:01:51", "reason": "44.2 bar outside safe range 30.0-40.0 bar; cumulative drift of 4.2 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:01:53", "reason": "45.2 bar outside safe range 30.0-40.0 bar; step of 5.3 bar exceeds max 5.0 bar; cumulative drift of 5.2 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:01:55", "reason": "46.2 bar outside safe range 30.0-40.0 bar; step of 6.2 bar exceeds max 5.0 bar; cumulative drift of 6.3 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:01:57", "reason": "47.2 bar outside safe range 30.0-40.0 bar; step of 7.2 bar exceeds max 5.0 bar; cumulative drift of 7.2 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:01:59", "reason": "48.2 bar outside safe range 30.0-40.0 bar; step of 8.3 bar exceeds max 5.0 bar; cumulative drift of 8.2 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:02:01", "reason": "49.2 bar outside safe range 30.0-40.0 bar; step of 9.9 bar exceeds max 5.0 bar; cumulative drift of 9.3 bar over last 3 accepted writes exceeds 2.0 bar limit"}
+{"timestamp": "2026-10-15 06:02:03", "reason": "50.2 bar outside safe range 30.0-40.0 bar; step of 10.6 bar exceeds max 5.0 bar; cumulative drift of 10.9 bar over last 3 accepted writes exceeds 2.0 bar limit"}

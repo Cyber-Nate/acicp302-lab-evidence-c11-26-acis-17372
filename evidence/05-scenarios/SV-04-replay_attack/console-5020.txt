@@ -1,0 +1,5 @@
+VM clock 2026-10-15. Verbatim program output copied from the learner's terminal.
+
+$ python3 replay_attack.py
+--- REPLAY ATTACK: port 5020 ---
+Replayed write 36.9 bar three times.

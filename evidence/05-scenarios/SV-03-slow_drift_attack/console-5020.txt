@@ -1,0 +1,16 @@
+VM clock 2026-10-15. Verbatim program output copied from the learner's terminal.
+
+$ python3 slow_drift_attack.py 5020
+Starting: 39.3 bar | Target: port 5020
+  Step 1: requested 40.3 -> actual 39.9
+  Step 2: requested 41.3 -> actual 39.7
+  Step 3: requested 42.3 -> actual 39.7
+  Step 4: requested 43.3 -> actual 40.0
+  Step 5: requested 44.3 -> actual 39.8
+  Step 6: requested 45.3 -> actual 40.0
+  Step 7: requested 46.3 -> actual 39.8
+  Step 8: requested 47.3 -> actual 40.0
+  Step 9: requested 48.3 -> actual 40.0
+  Step 10: requested 49.3 -> actual 40.0
+  Step 11: requested 50.3 -> actual 39.7
+  Step 12: requested 51.3 -> actual 40.0
