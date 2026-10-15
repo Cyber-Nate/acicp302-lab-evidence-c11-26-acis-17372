@@ -7,7 +7,7 @@
 - Learner: Nathaniel Temitope Ogunjobi
 - Registration number: C11/26/ACIS/17372
 - Submission date: 15 October 2026
-- Learner evidence-repository URL and final commit: `[INSERT]`
+- Learner evidence-repository URL and final commit: `https://github.com/Cyber-Nate/acicp302-lab-evidence-c11-26-acis-17372.git`
 - Course source URL: `https://github.com/icdfa/ACICP302ICS-Network-Security-and-Attacks`
 - Course source commit used: `2a66f9bcf253eb3fe31c68ad52794cd535421da8`
 - Assigned VM/snapshot: Ubuntu 64-bit guest on VMware Workstation (hostname cyber-nate-VMware-Virtual-Platform); snapshot: LAB-START-1
